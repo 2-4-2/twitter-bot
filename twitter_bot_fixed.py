@@ -360,3 +360,8 @@ if __name__ == "__main__":
     
     bot = TwitterBot()
     asyncio.run(bot.run())
+
+import threading
+import health
+
+threading.Thread(target=health.run, daemon=True).start()
